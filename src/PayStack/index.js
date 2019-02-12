@@ -1,18 +1,17 @@
 'use strict';
 
 const Event = use('Event')
+const Env = use('Env')
 
 class PayStackAPIClient {
       constructor(Agent, Config) {
           this.agent = new Agent(
               Config.get('paystack.apiKey'),
-              Config.get('app.env')
+              Env.get('NODE_ENV')
           );
         
           if(Config.get('paystack.installWebHook') === true){
-              this.agent.webhook = Agent.webhook.install(
-                  Event
-              )
+              ;
           }
       }
 };
