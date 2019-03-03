@@ -7,23 +7,39 @@
     "src",
     "config",
     "providers",
-    "instructions.js"
+    "instructions.js",
+    "instructions.md",
     "index.js"
   ],
   "directories":{
     "test":"test"
   },
   "scripts": {
-    "test": "node test/provider.spec.js"
+    "lint": "standard",
+    "pretest": "npm run lint",
+    "test": "nyc node japaFile.js",
+    "test:win": "node ./node_modules/japa-cli/index.js",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "keywords": [
     "paystack",
     "payments",
     "API",
-    "adonisjs"
+    "adonisjs",
+    "adonis-framework"
   ],
   "author": "StitchNG <stitchnig@gmail.com> (https://twitter.com/stitchappn)",
   "license": "MIT",
+  "nyc": {
+    "exclude": [
+      "test"
+    ]
+  },
+  "standard": {
+    "globals": [
+      "use"
+    ]
+  },
   "dependencies": {
     "@adonisjs/generic-exceptions":"^2.0.1",
     "@stitchng/paystack":"^0.1.0",
@@ -32,10 +48,13 @@
   "devDependencies": {
     "japa": "^2.0.6",
     "japa-cli":"^2.0.0",
+    "nyc": "^13.0.1",
     "semver":"^5.5.0",
+    "coveralls": "^3.0.2",
+    "standard": "^12.0.1",
     "@adonisjs/sink":"^1.0.6",
     "@adonisjs/fold": "^4.0.9"
-},
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/stitchng/adonis-paystack.git"
