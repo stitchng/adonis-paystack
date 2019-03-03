@@ -42,17 +42,17 @@ class CheckOutController {
 	 */
 	async initTransaction({ request, response }) {
 
-		//.....
-    
-    let response = await paystack.initializeTransaction({
-      callback_url:"https://example.com/hooks/paystack", 
-      amount: 3000, 
-      email: "xyz@abc.com"
-    })
+		     //.....
 
-		return await response.status(200).json({
-      data: response.body
-    })
+		    let response = await paystack.initializeTransaction({
+		      callback_url:"https://example.com/hooks/paystack", 
+		      amount: 3000, 
+		      email: "xyz@abc.com"
+		    })
+
+		    return await response.status(200).json({
+		      data: response.body
+		    })
 	}
 
 }
