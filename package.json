@@ -1,7 +1,7 @@
 {
   "name": "@adonisjs/adonis-paystack",
   "version": "0.1.1",
-  "description": "An addon/plugin package to provide PayStack payment services in AdonisJS 4.0+",
+  "description": "An addon/plugin package to provide PayStack payment services in AdonisJS 4.1+",
   "main": "index.js",
   "files":[
     "src",
