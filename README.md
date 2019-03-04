@@ -13,7 +13,7 @@ An addon/plugin package to provide InfoBip single/bulk SMS services in AdonisJS 
 
 ```bash
 
-    $ npm i --save @adonisjs/adonis-paystack
+    $ npm i --save adonisjs-paystack
 
 ```
 
@@ -86,8 +86,8 @@ MIT
     
 ## Contributing
 
-[npm-image]: https://img.shields.io/npm/v/@adonisjs/adonis-paystack.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/@adonisjs/adonis-paystack
+[npm-image]: https://img.shields.io/npm/v/adonisjs-paystack.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/adonisjs-paystack
 
 [travis-image]: https://img.shields.io/travis/stitchng/adonis-paystack/master.svg?style=flat-square
 [travis-url]: https://travis-ci.org/stitchng/adonis-paystack
