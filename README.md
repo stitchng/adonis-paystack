@@ -1,5 +1,5 @@
 # adonis-paystack
-An addon/plugin package to provide InfoBip single/bulk SMS services in AdonisJS 4.0+
+An addon/plugin package to provide InfoBip single/bulk SMS services in AdonisJS 4.1+
 
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
