@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "@adonisjs/generic-exceptions":"^2.0.1",
-    "paystack":"^0.1.0",
+    "paystack-node":"^0.1.0",
     "debug":"^3.1.2"
   },
   "devDependencies": {
