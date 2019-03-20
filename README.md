@@ -1,5 +1,5 @@
 # adonis-paystack
-An addon/plugin package to provide InfoBip single/bulk SMS services in AdonisJS 4.1+
+An addon/plugin package to provide PayStack payment services in AdonisJS 4.1+
 
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
@@ -13,11 +13,11 @@ An addon/plugin package to provide InfoBip single/bulk SMS services in AdonisJS 
 
 ```bash
 
-    $ npm i --save adonisjs-paystack
+    $ adonis install adonisjs-paystack
 
 ```
 
->Make use of it inside a HTTP/WS controller
+>Make use of it inside a HTTP/Web Socket Controller(s)
 
 ```js
 
@@ -75,14 +75,16 @@ MIT
 
 ```bash
 
+	npm run lint
+
     npm run test
 
 ```
 
 ## Credits
 
-- Ifeora Okechukwu <Head Of Technology - Oparand> (https://twitter.com/isocroft)
-- Ahmad Abdul-Aziz <Software Engineer> (https://twitter.com/dev_amaz)
+- [Ifeora Okechukwu <Head Of Technology - Oparand>](https://twitter.com/isocroft)
+- [Ahmad Abdul-Aziz <Software Engineer>](https://twitter.com/dev_amaz)
     
 ## Contributing
 
