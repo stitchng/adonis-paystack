@@ -24,7 +24,7 @@ test.group('AdonisJS FlutterwaveRave Test(s)', (group) => {
   })
 
   test('instantiate without errors or side-effects [yet]', (assert) => {
-    this.config.set('paystack.apiKey', 'FLWPUBK-e64d8e6748e94f8a309e09349ebc8e4e-C')
+    this.config.set('paystack.apiTestKey', 'sk_test_f65a8e6748e94f8a309e09349ebc8e4a')
     this.env.set('NODE_ENV', 'development')
 
     const PayStackInstance = new PayStack(PayStackStub, this.config, this.env)
