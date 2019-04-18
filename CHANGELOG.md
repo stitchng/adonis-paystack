@@ -1,5 +1,5 @@
 <a name="0.1.3"></a>
-# 0.1.3 (2019-03-17)
+# 0.1.3 (2019-04-18)
 
 - Updated dependency **paystack-node** to v0.2.0
 
