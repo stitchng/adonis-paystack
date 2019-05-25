@@ -14,8 +14,10 @@ class PayStackProvider extends ServiceProvider {
     this.app.singleton('Adonis/Addons/PayStack', () => {
       const Config = this.app.use('Adonis/Src/Config')
       const Env = this.app.use('Env')
-      const PayStack = require('../src/Paystack/index.js')
-      return (new PayStack(require('paystack-node'), Config, Env)).agent
+      const PayStack = require('../src/PayStack/index.js')
+      const paystack = new PayStack(require('paystack-node'), Config, Env)
+
+      return paystack.agent
     })
 
     this.app.alias('Adonis/Addons/PayStack', 'PayStack')
