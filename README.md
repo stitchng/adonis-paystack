@@ -21,7 +21,7 @@ An addon/plugin package to provide PayStack payment services in AdonisJS 4.1+
 
 ```js
 
-const paystack = use('PayStack')
+const Paystack = use('PayStack')
 
 /**
  * This class handles all requests for 
@@ -42,15 +42,28 @@ class CheckOutController {
 	 */
 	async initTransaction({ request, response }) {
 
-		     //.....
+		    //.....
 
-		    let response = await paystack.initializeTransaction({
-		      callback_url:"https://example.com/hooks/paystack", 
+		    let response = await Paystack.initializeTransaction({
+		      callback_url:"https://locahost:3333/trans/hooks/paystack", 
 		      amount: 3000, 
 		      email: "xyz@abc.com"
 		    })
 
 		    return await response.status(200).json({
+		      data: response.body
+		    })
+	}
+
+	async fetchCustomer({ request, response }){
+
+			//.....
+
+			let response = await Paystack.getCustomer({
+				customer_id:'CUS_reu3738we993wsnqah'
+			})
+
+			return await response.status(200).json({
 		      data: response.body
 		    })
 	}

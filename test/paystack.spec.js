@@ -15,7 +15,7 @@ const PayStack = require('../src/PayStack/index.js')
 
 let PayStackStub = null
 
-test.group('AdonisJS FlutterwaveRave Test(s)', (group) => {
+test.group('AdonisJS PayStack Test(s)', (group) => {
   group.beforeEach(() => {
     PayStackStub = require('./setup/api-stub.js')
 
