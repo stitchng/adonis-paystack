@@ -1,4 +1,4 @@
-<a name="0.1.3"></a>
+<a name="0.1.4"></a>
 # 0.1.4 (2019-05-25)
 
 - Fixed "Cannot find module '../src/Paystack/index.js'" error for provider
