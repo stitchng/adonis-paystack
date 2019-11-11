@@ -96,12 +96,20 @@ MIT
 
 ## Credits
 
-- [Ifeora Okechukwu <Head Of Technology - Oparand>](https://twitter.com/isocroft)
-- [Ahmad Abdul-Aziz <Software Engineer>](https://twitter.com/dev_amaz)
+- [Ifeora Okechukwu](https://twitter.com/isocroft)
+- [Ahmad Abdul-Aziz](https://twitter.com/dev_amaz)
     
 ## Contributing
 
 See the [CONTRIBUTING.md](https://github.com/stitchng/adonis-paystack/blob/master/CONTRIBUTING.md) file for info
+
+## Support 
+
+**Coolcodes** is a non-profit software foundation (collective) created by **Oparand** - parent company of StitchNG, Synergixe based in Abuja, Nigeria. You'll find an overview of all our work and supported open source projects on our [Facebook Page](https://www.facebook.com/coolcodes/).
+
+>Follow us on facebook if you can to get the latest open source software/freeware news and infomation.
+
+Does your business depend on our open projects? Reach out and support us on [Patreon](https://www.patreon.com/coolcodes/). All pledges will be dedicated to allocating workforce on maintenance and new awesome stuff.
 
 [npm-image]: https://img.shields.io/npm/v/adonisjs-paystack.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/adonisjs-paystack

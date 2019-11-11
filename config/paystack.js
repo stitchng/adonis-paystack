@@ -14,7 +14,7 @@ module.exports = {
 |
 |
 */
-  apiTestKey: Env.get('PAYSTACK_API_TEST_KEY'),
+  apiTestKey: Env.get('PAYSTACK_API_TEST_KEY', null),
 
   /*
 |-----------------------------------------------------------------
@@ -27,5 +27,5 @@ module.exports = {
 |
 |
 */
-  apiLiveKey: Env.get('PAYSTACK_API_LIVE_KEY')
+  apiLiveKey: Env.get('PAYSTACK_API_LIVE_KEY', null)
 }
