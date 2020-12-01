@@ -1,3 +1,8 @@
+<a name="0.1.7"></a>
+# 0.1.7 (2020-12-01)
+
+- Updated dependency **paystack-node** to v0.2.5
+
 <a name="0.1.6"></a>
 # 0.1.6 (2020-02-05)
 
