@@ -16,7 +16,7 @@
 <a name="0.1.4"></a>
 # 0.1.4 (2019-05-25)
 
-- Fixed "Cannot find module '../src/Paystack/index.js'" error for Provider
+- Fixed _"Cannot find module '../src/Paystack/index.js'"_ error for Provider
 
 <a name="0.1.3"></a>
 # 0.1.3 (2019-04-18)
