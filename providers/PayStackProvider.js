@@ -17,7 +17,7 @@ class PayStackProvider extends ServiceProvider {
       const PayStack = require('../src/PayStack/index.js')
       const paystack = new PayStack(require('paystack-node'), Config, Env)
 
-      return paystack.agent
+      return paystack;
     })
 
     this.app.alias('Adonis/Addons/PayStack', 'PayStack')
