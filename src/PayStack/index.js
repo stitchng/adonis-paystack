@@ -3,9 +3,17 @@
 // add testing mock accessibility { paystack-node = v0.2.6+ }
 const MockDecorator = function decorator(context) {
   this.context = context;
+  this.set = function decorationSetter (target, prop, value) {
+    this.context['_mock']['__' + prop] = value;
+  }
+
   this.get = function decorationGetter (target, prop) {
     if (prop === 'fake' && typeof target[prop] !== 'function') {
       return this.context.constructor.engageMock;
+    }
+
+    if (prop === 'macro' && typeof target[prop] !== 'function') {
+      return this.context.constructor.mockMacro;
     }
 
     if (prop === 'restore' && typeof target[prop] !== 'function') {
