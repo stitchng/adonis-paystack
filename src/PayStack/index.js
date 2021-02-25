@@ -8,6 +8,13 @@ const MockDecorator = function decorator(context) {
   }
 
   this.get = function decorationGetter (target, prop) {
+    /**
+     * if node is inspecting then stick to target properties
+     */
+    if (typeof (prop) === 'symbol' || prop === 'inspect') {
+      return target[prop]
+    }
+
     if (prop === 'fake' && typeof target[prop] !== 'function') {
       return this.context.constructor.engageMock;
     }
