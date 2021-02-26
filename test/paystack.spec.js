@@ -29,7 +29,7 @@ test.group('AdonisJS PayStack Test(s)', (group) => {
 
     const PayStackInstance = new PayStack(PayStackStub, this.config, this.env)
 
-    assert.isTrue(typeof PayStackInstance.agent.createCustomer === 'function')
-    assert.isTrue(typeof PayStackInstance.agent.createInvoice === 'function')
+    assert.isTrue(typeof PayStackInstance.createCustomer === 'function')
+    assert.isTrue(typeof PayStackInstance.createInvoice === 'function')
   })
 })
