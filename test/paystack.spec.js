@@ -17,7 +17,6 @@ const { ioc } = require('@adonisjs/fold')
 
 test.group('AdonisJS PayStack Test(s)', (group) => {
   group.beforeEach(() => {
-
     this.config = new Config()
     this.env = new Env()
 
@@ -35,8 +34,8 @@ test.group('AdonisJS PayStack Test(s)', (group) => {
 
   test('register provider without errors', (assert) => {
     ioc.bind('Adonis/Src/Config', () => {
-      return this.config;
-    }) 
+      return this.config
+    })
 
     ioc.bind('Adonis/Src/Env', () => {
       return this.env
@@ -44,9 +43,14 @@ test.group('AdonisJS PayStack Test(s)', (group) => {
     ioc.alias('Adonis/Src/Env', 'Env')
 
     const serviceProvider = new PayStackProvider(ioc)
-
     serviceProvider.register()
 
-    assert.instanceOf(ioc.use('Adonis/Addons/PayStack'), PayStack)
+    const paystack = ioc.use('Adonis/Addons/PayStack')
+
+    assert.instanceOf(paystack, PayStack)
+
+    paystack.fake()
+
+    assert.isTrue(typeof paystack.chargeCard === 'function')
   })
 })

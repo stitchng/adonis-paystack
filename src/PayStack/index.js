@@ -1,11 +1,11 @@
 'use strict'
 
 // add testing mock accessibility { paystack-node = v0.2.6+ }
-const MockDecorator = function decorator(context) {
-  this.context = context;
+const MockDecorator = function decorator (context) {
+  this.context = context
   this.set = function decorationSetter (target, prop, value) {
     if (!target[prop]) {
-      this.context['_mock']['__' + prop] = value;
+      this.context['_mock']['__' + prop] = value
     }
   }
 
@@ -18,7 +18,7 @@ const MockDecorator = function decorator(context) {
     }
 
     if (prop === 'fake' && typeof target[prop] !== 'function') {
-      return this.context.constructor.engageMock;
+      return this.context.constructor.engageMock
     }
 
     if (prop === 'withError' && typeof target[prop] !== 'function') {
@@ -30,11 +30,11 @@ const MockDecorator = function decorator(context) {
     }
 
     if (prop === 'macro' && typeof target[prop] !== 'function') {
-      return this.context.constructor.mockMacro;
+      return this.context.constructor.mockMacro
     }
 
     if (prop === 'restore' && typeof target[prop] !== 'function') {
-      return this.context.constructor.disengageMock;
+      return this.context.constructor.disengageMock
     }
 
     return this.context[prop] || target[prop]
@@ -48,7 +48,7 @@ class PayStackAPIClient {
 
     const decorator = new MockDecorator(
       new Agent(apiKey, environment)
-    );
+    )
     return new Proxy(this, decorator)
   }
 };
