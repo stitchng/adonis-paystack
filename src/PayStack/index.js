@@ -4,7 +4,9 @@
 const MockDecorator = function decorator(context) {
   this.context = context;
   this.set = function decorationSetter (target, prop, value) {
-    this.context['_mock']['__' + prop] = value;
+    if (!target[prop]) {
+      this.context['_mock']['__' + prop] = value;
+    }
   }
 
   this.get = function decorationGetter (target, prop) {
@@ -17,6 +19,14 @@ const MockDecorator = function decorator(context) {
 
     if (prop === 'fake' && typeof target[prop] !== 'function') {
       return this.context.constructor.engageMock;
+    }
+
+    if (prop === 'withError' && typeof target[prop] !== 'function') {
+      return this.context.constructor.respondWithError
+    }
+
+    if (prop === 'withOutError' && typeof target[prop] !== 'function') {
+      return this.context.constructor.respondWithoutError
     }
 
     if (prop === 'macro' && typeof target[prop] !== 'function') {

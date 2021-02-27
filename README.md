@@ -96,6 +96,20 @@ module.exports = CheckOutController
 
 ```
 
+## Creating fakes (for Unit Testing)
+
+>It's possible to fake the `PayStack` instance like so:
+
+```js
+const PayStack = use('PayStack')
+
+//start faking the provider instance
+PayStack.fake()
+
+//stop faking the provider instance
+PayStack.restore()
+```
+
 ## License
 
 MIT
