@@ -18,23 +18,33 @@ const MockDecorator = function decorator (context) {
     }
 
     if (prop === 'fake' && typeof target[prop] !== 'function') {
-      return this.context.constructor.engageMock
+      return this.context.constructor.engageMock.bind(
+        this.context.constructor
+      )
     }
 
     if (prop === 'withError' && typeof target[prop] !== 'function') {
-      return this.context.constructor.respondWithError
+      return this.context.constructor.respondWithError.bind(
+        this.context.constructor
+      )
     }
 
     if (prop === 'withOutError' && typeof target[prop] !== 'function') {
-      return this.context.constructor.respondWithoutError
+      return this.context.constructor.respondWithoutError.bind(
+        this.context.constructor
+      )
     }
 
     if (prop === 'macro' && typeof target[prop] !== 'function') {
-      return this.context.constructor.mockMacro
+      return this.context.constructor.mockMacro.bind(
+        this.context.constructor
+      )
     }
 
     if (prop === 'restore' && typeof target[prop] !== 'function') {
-      return this.context.constructor.disengageMock
+      return this.context.constructor.disengageMock.bind(
+        this.context.constructor
+      )
     }
 
     return this.context[prop] || target[prop]
