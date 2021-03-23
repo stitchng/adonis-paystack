@@ -96,7 +96,7 @@ module.exports = CheckOutController
 
 ```
 
-## Creating fakes (for Unit Testing)
+## Creating fakes (for Unit/Integration Testing in AdonisJS)
 
 >It's possible to fake the `PayStack` instance like so:
 

@@ -46,8 +46,10 @@ test.group('AdonisJS PayStack Test(s)', (group) => {
     serviceProvider.register()
 
     const paystack = ioc.use('Adonis/Addons/PayStack')
+    const paystackFeesCalulator = ioc.use('Adonis/Addons/PayStack.FeesCalulator')
 
     assert.instanceOf(paystack, PayStack)
+    // console.log(parseFloat((paystackFeesCalulator.calculateFor(250000) / 100).toFixed(2)))
 
     paystack.fake()
 

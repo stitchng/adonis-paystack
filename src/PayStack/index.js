@@ -47,7 +47,9 @@ const MockDecorator = function decorator (context) {
       )
     }
 
-    return this.context[prop] || target[prop]
+    const contextFn = this.context[prop]
+    const targetFn = target[prop] || { bind: function noop () { } }
+    return typeof contextFn === 'function' ? contextFn.bind(this.context) : targetFn.bind(target)
   }
 }
 
